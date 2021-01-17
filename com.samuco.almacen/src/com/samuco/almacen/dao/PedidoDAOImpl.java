@@ -11,7 +11,7 @@ import com.samuco.almacen.config.MysqlConnection;
 import com.samuco.almacen.model.Pedido;
 
 
-public class PedidoDAOImpl implements IPedidoDAO {
+public class PedidoDAOImpl implements ICrudDAO<Pedido> {
 
 	@Override
 	public List<Pedido> getAllPedido() {

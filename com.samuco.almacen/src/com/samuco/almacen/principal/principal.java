@@ -34,13 +34,13 @@ public class principal {
 			*/
 			
 			// LIST PEDIDO
-			/*
+			
 			pedidoDAO.toString(pedidoDAO.getAllPedido());
-			*/
+			
 			
 			// GET PEDIDO
 			
-			pedidoDAO.imprimir(pedidoDAO.getPedido(2));
+			//pedidoDAO.imprimir(pedidoDAO.getPedido(2));
 			
 			
 			//UPDATE PEDIDO
