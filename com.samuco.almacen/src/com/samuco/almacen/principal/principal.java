@@ -4,15 +4,17 @@ import java.sql.Connection;
 import java.sql.Date;
 import java.sql.SQLException;
 import java.time.LocalDate;
+import java.util.Arrays;
+import java.util.List;
 
 import com.samuco.almacen.config.MysqlConnection;
 import com.samuco.almacen.dao.PedidoDAOImpl;
 import com.samuco.almacen.model.Pedido;
 
-public class main {
+public class principal {
 
 	public static void main(String[] args) throws SQLException {
-		// TODO Auto-generated method stub
+		
 		Connection con = MysqlConnection.getConnection();
 		if (con != null) {
 			System.out.println("Coneccion Establecida");
@@ -30,7 +32,8 @@ public class main {
 			PedidoDAOImpl pedidoDAO = new PedidoDAOImpl();
 			pedidoDAO.addPedido(pedido);
 			
+			pedidoDAO.toString(pedidoDAO.getAllPedido());
+
 		}
 	}
-
 }
