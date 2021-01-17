@@ -20,7 +20,9 @@ public class principal {
 			System.out.println("Coneccion Establecida");
 			
 			Pedido pedido = new Pedido();
-			LocalDate date = LocalDate.parse("2018-05-05");
+			PedidoDAOImpl pedidoDAO = new PedidoDAOImpl();
+			// ADD
+			/*LocalDate date = LocalDate.parse("2018-05-05");
 			pedido.setFechaInicial(Date.valueOf(date));
 			pedido.setNota(1);
 			pedido.setFactura(1);
@@ -28,12 +30,41 @@ public class principal {
 			pedido.setVendedor(1);
 			pedido.setCobrador(1);
 			pedido.setFechaFinal(Date.valueOf(date));
-			
-			PedidoDAOImpl pedidoDAO = new PedidoDAOImpl();
 			pedidoDAO.addPedido(pedido);
+			*/
 			
+			// LIST PEDIDO
+			/*
 			pedidoDAO.toString(pedidoDAO.getAllPedido());
-
+			*/
+			
+			// GET PEDIDO
+			
+			pedidoDAO.imprimir(pedidoDAO.getPedido(2));
+			
+			
+			//UPDATE PEDIDO
+			/*
+			LocalDate date = LocalDate.parse("2000-05-05");
+			pedido.setFechaInicial(Date.valueOf(date));
+			pedido.setNota(5);
+			pedido.setFactura(5);
+			pedido.setCliente(5);
+			pedido.setVendedor(5);
+			pedido.setCobrador(5);
+			pedido.setFechaFinal(Date.valueOf(date));
+			
+			if (pedidoDAO.updatePedido(pedido, 5) == 1) {
+				System.out.println("Pedido Actualizado correctamente");
+			}
+			*/
+			
+			//DELETE PEDIDO
+			/*
+			if (pedidoDAO.deletePedido(1) == false) {
+				System.out.println("Pedido Eliminado Correctamente");
+			}
+			*/			
 		}
 	}
 }
