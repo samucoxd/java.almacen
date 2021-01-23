@@ -14,7 +14,7 @@ import com.samuco.almacen.model.Pedido;
 public class PedidoDAOImpl implements ICrudDAO<Pedido> {
 
 	@Override
-	public List<Pedido> getAllPedido() {
+	public List<Pedido> getAll() {
 		Connection con = null;
 		PreparedStatement prepared = null;
 		ResultSet result = null;
@@ -50,7 +50,7 @@ public class PedidoDAOImpl implements ICrudDAO<Pedido> {
 	}
 
 	@Override
-	public Pedido getPedido(int id){
+	public Pedido getById(int id){
 		Connection con = null;
 		PreparedStatement prepared = null;
 		ResultSet result = null;
@@ -87,7 +87,7 @@ public class PedidoDAOImpl implements ICrudDAO<Pedido> {
 	}
 
 	@Override
-	public int addPedido(Pedido pedido) {
+	public int add(Pedido pedido) {
 		
 		Connection con = null;
 		PreparedStatement prepared = null;
@@ -114,7 +114,7 @@ public class PedidoDAOImpl implements ICrudDAO<Pedido> {
 	}
 
 	@Override
-	public int updatePedido(Pedido pedidoEdit, int id) {
+	public int update(Pedido pedidoEdit, int id) {
 		
 		Connection con = null;
 		PreparedStatement prepared = null;
@@ -154,7 +154,7 @@ public class PedidoDAOImpl implements ICrudDAO<Pedido> {
 	}
 
 	@Override
-	public boolean deletePedido(int id) {
+	public boolean delete(int id) {
 		
 		Connection con = null;
 		PreparedStatement prepared = null;

@@ -5,10 +5,13 @@ import java.sql.Date;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 
 import com.samuco.almacen.config.MysqlConnection;
+import com.samuco.almacen.dao.ClienteDAOImpl;
 import com.samuco.almacen.dao.PedidoDAOImpl;
+import com.samuco.almacen.model.Cliente;
 import com.samuco.almacen.model.Pedido;
 
 public class principal {
@@ -35,7 +38,7 @@ public class principal {
 			
 			// LIST PEDIDO
 			
-			pedidoDAO.toString(pedidoDAO.getAllPedido());
+			//pedidoDAO.toString(pedidoDAO.getAllPedido());
 			
 			
 			// GET PEDIDO
@@ -65,6 +68,13 @@ public class principal {
 				System.out.println("Pedido Eliminado Correctamente");
 			}
 			*/			
+			
+			//Cliente cliente = new Cliente();
+			ClienteDAOImpl clienteDAO = new ClienteDAOImpl();
+			
+			System.out.println(clienteDAO.toString());
+
+				
 		}
 	}
 }
